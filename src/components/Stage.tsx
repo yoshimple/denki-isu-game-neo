@@ -106,7 +106,7 @@ export function Stage({
 
         {/* 中央のアクションボタン */}
         <div className="absolute inset-0 flex items-center justify-center">
-          {centerButton.show && centerButton.onClick ? (
+          {centerButton.show && centerButton.onClick && (
             <button
               type="button"
               onClick={centerButton.onClick}
@@ -133,10 +133,6 @@ export function Stage({
               </span>
               <span className="drop-shadow-sm">{centerButton.label}</span>
             </button>
-          ) : (
-            <span className="text-6xl md:text-7xl opacity-20 text-yellow-500">
-              ⚡
-            </span>
           )}
         </div>
       </div>
