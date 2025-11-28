@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = "https://denki-isu-game.vercel.app";
+const siteUrl = "https://denki-isu-game-neo.vercel.app";
 const siteName = "電気イスゲーム";
 const siteDescription =
   "1台の端末で2人対戦！12脚のイスに電流を仕掛け合う心理戦ゲーム。40点先取で勝利、3回感電したら負け！友達や家族と一緒に楽しめる無料ブラウザゲームです。";

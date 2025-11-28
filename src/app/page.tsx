@@ -33,7 +33,7 @@ const jsonLd = {
     availability: "https://schema.org/InStock",
   },
   inLanguage: "ja",
-  url: "https://denki-isu-game.vercel.app",
+  url: "https://denki-isu-game-neo.vercel.app",
 };
 
 export default function StartPage() {

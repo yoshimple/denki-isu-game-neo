@@ -180,6 +180,18 @@ export function GameOverOverlay({
             🏠 トップに戻る
           </button>
         </div>
+
+        {/* 作者リンク */}
+        <div className="mt-4 text-center">
+          <a
+            href="https://note.com/yoshimple"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-yellow-600/70 hover:text-yellow-400 text-xs transition-colors"
+          >
+            Created by @yoshimple
+          </a>
+        </div>
       </div>
     </div>
   );
