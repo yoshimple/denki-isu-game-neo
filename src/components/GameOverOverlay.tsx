@@ -41,7 +41,7 @@ export function GameOverOverlay({
   const getEndReasonText = (reason: GameEndReason | null) => {
     switch (reason) {
       case "score_reached":
-        return "40点達成！";
+        return "40点以上に到達しました！";
       case "failure_limit":
         return `${loser.name}さんが3回感電...`;
       case "chairs_exhausted":
@@ -100,7 +100,7 @@ export function GameOverOverlay({
                   const result = frontPlayer.roundHistory.find(
                     (r) =>
                       r.roundNumber === round &&
-                      r.turnSide === frontPlayerTurnSide,
+                      r.turnSide === frontPlayerTurnSide
                   );
                   return (
                     <td key={round} className="py-1 text-center">
@@ -110,11 +110,11 @@ export function GameOverOverlay({
                             result?.wasShocked
                               ? "bg-gray-700 text-yellow-400"
                               : result
-                                ? "bg-gray-700 text-white"
-                                : "bg-gray-800 text-gray-500"
+                              ? "bg-gray-700 text-white"
+                              : "bg-gray-800 text-gray-500"
                           }`}
                         >
-                          {result?.wasShocked ? "⚡" : (result?.score ?? "-")}
+                          {result?.wasShocked ? "⚡" : result?.score ?? "-"}
                         </div>
                       </div>
                     </td>
@@ -135,7 +135,7 @@ export function GameOverOverlay({
                   const result = backPlayer.roundHistory.find(
                     (r) =>
                       r.roundNumber === round &&
-                      r.turnSide === backPlayerTurnSide,
+                      r.turnSide === backPlayerTurnSide
                   );
                   return (
                     <td key={round} className="py-1 text-center">
@@ -145,11 +145,11 @@ export function GameOverOverlay({
                             result?.wasShocked
                               ? "bg-gray-700 text-yellow-400"
                               : result
-                                ? "bg-gray-700 text-white"
-                                : "bg-gray-800 text-gray-500"
+                              ? "bg-gray-700 text-white"
+                              : "bg-gray-800 text-gray-500"
                           }`}
                         >
-                          {result?.wasShocked ? "⚡" : (result?.score ?? "-")}
+                          {result?.wasShocked ? "⚡" : result?.score ?? "-"}
                         </div>
                       </div>
                     </td>
