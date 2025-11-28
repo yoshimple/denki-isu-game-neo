@@ -112,7 +112,9 @@ export function Stage({
               onClick={centerButton.onClick}
               className={`
                 w-28 h-28 md:w-36 md:h-36 rounded-full
-                bg-gradient-to-br ${centerButton.color} ${centerButton.hoverColor}
+                bg-gradient-to-br ${centerButton.color} ${
+                centerButton.hoverColor
+              }
                 text-gray-900 font-bold text-sm md:text-base
                 transition-all duration-200 transform hover:scale-110
                 flex flex-col items-center justify-center gap-1
