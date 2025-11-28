@@ -166,6 +166,18 @@ function GameContent() {
             <li>40点先取で勝利！ / 3回感電したら負け</li>
           </ul>
         </div>
+
+        {/* 作者リンク */}
+        <div className="mt-2 text-center">
+          <a
+            href="https://note.com/yoshimple"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-yellow-600/70 hover:text-yellow-400 text-xs transition-colors"
+          >
+            Created by @yoshimple
+          </a>
+        </div>
       </main>
 
       {/* 判定オーバーレイ */}
@@ -211,14 +223,33 @@ function GameContent() {
       {/* グローバルスタイル */}
       <style jsx global>{`
         @keyframes flash {
-          0%, 100% { opacity: 0; }
-          50% { opacity: 1; }
+          0%,
+          100% {
+            opacity: 0;
+          }
+          50% {
+            opacity: 1;
+          }
         }
 
         @keyframes shock {
-          0%, 100% { transform: translateX(0); }
-          10%, 30%, 50%, 70%, 90% { transform: translateX(-5px) rotate(-2deg); }
-          20%, 40%, 60%, 80% { transform: translateX(5px) rotate(2deg); }
+          0%,
+          100% {
+            transform: translateX(0);
+          }
+          10%,
+          30%,
+          50%,
+          70%,
+          90% {
+            transform: translateX(-5px) rotate(-2deg);
+          }
+          20%,
+          40%,
+          60%,
+          80% {
+            transform: translateX(5px) rotate(2deg);
+          }
         }
 
         .animate-flash {

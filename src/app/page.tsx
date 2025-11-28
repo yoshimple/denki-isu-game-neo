@@ -164,6 +164,18 @@ export default function StartPage() {
             <li>40点先取で勝利！ / 3回感電したら負け</li>
           </ul>
         </div>
+
+        {/* 作者リンク */}
+        <div className="mt-4 text-center">
+          <a
+            href="https://note.com/yoshimple"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-yellow-600/70 hover:text-yellow-400 text-xs transition-colors"
+          >
+            Created by @yoshimple
+          </a>
+        </div>
       </div>
     </div>
   );

@@ -72,7 +72,9 @@ function VSContent() {
 
           {/* VS - 黄色 */}
           <div
-            className={`flex-shrink-0 mx-4 transition-all duration-500 ${showVS ? "scale-100 opacity-100" : "scale-0 opacity-0"}`}
+            className={`flex-shrink-0 mx-4 transition-all duration-500 ${
+              showVS ? "scale-100 opacity-100" : "scale-0 opacity-0"
+            }`}
           >
             <div className="relative">
               {/* 雷エフェクト - VS周辺のみ */}
@@ -122,6 +124,18 @@ function VSContent() {
             </span>
           </div>
         )}
+
+        {/* 作者リンク */}
+        <div className="mt-8 text-center">
+          <a
+            href="https://note.com/yoshimple"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-yellow-600/70 hover:text-yellow-400 text-xs transition-colors"
+          >
+            Created by @yoshimple
+          </a>
+        </div>
       </div>
 
       {/* CSSアニメーション */}
@@ -132,17 +146,29 @@ function VSContent() {
           left: -80px;
           right: -80px;
           bottom: -50px;
-          background: radial-gradient(ellipse at center, rgba(250, 204, 21, 0.4) 0%, transparent 60%);
+          background: radial-gradient(
+            ellipse at center,
+            rgba(250, 204, 21, 0.4) 0%,
+            transparent 60%
+          );
           animation: lightning-pulse 0.8s ease-in-out infinite;
         }
 
         .lightning-bolt {
           position: absolute;
           width: 6px;
-          background: linear-gradient(to bottom, transparent, rgba(250, 204, 21, 1), rgba(255, 255, 255, 0.9), rgba(250, 204, 21, 1), transparent);
+          background: linear-gradient(
+            to bottom,
+            transparent,
+            rgba(250, 204, 21, 1),
+            rgba(255, 255, 255, 0.9),
+            rgba(250, 204, 21, 1),
+            transparent
+          );
           animation: lightning-strike 0.15s ease-out infinite;
           filter: blur(1px);
-          box-shadow: 0 0 15px rgba(250, 204, 21, 0.8), 0 0 30px rgba(250, 204, 21, 0.5);
+          box-shadow: 0 0 15px rgba(250, 204, 21, 0.8),
+            0 0 30px rgba(250, 204, 21, 0.5);
         }
 
         .lightning-bolt-1 {
@@ -189,27 +215,64 @@ function VSContent() {
         }
 
         @keyframes lightning-pulse {
-          0%, 100% { opacity: 0.4; }
-          25% { opacity: 1; }
-          50% { opacity: 0.6; }
-          75% { opacity: 0.9; }
+          0%,
+          100% {
+            opacity: 0.4;
+          }
+          25% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0.6;
+          }
+          75% {
+            opacity: 0.9;
+          }
         }
 
         @keyframes lightning-strike {
-          0% { opacity: 0; transform: scaleY(0) translateX(0); }
-          5% { opacity: 1; transform: scaleY(1) translateX(-2px); }
-          10% { opacity: 1; transform: scaleY(1) translateX(2px); }
-          15% { opacity: 0.8; transform: scaleY(1) translateX(-1px); }
-          20% { opacity: 0; }
-          100% { opacity: 0; }
+          0% {
+            opacity: 0;
+            transform: scaleY(0) translateX(0);
+          }
+          5% {
+            opacity: 1;
+            transform: scaleY(1) translateX(-2px);
+          }
+          10% {
+            opacity: 1;
+            transform: scaleY(1) translateX(2px);
+          }
+          15% {
+            opacity: 0.8;
+            transform: scaleY(1) translateX(-1px);
+          }
+          20% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 0;
+          }
         }
 
         @keyframes flash {
-          0%, 90%, 100% { opacity: 0; }
-          5% { opacity: 0.4; }
-          10% { opacity: 0; }
-          15% { opacity: 0.2; }
-          20% { opacity: 0; }
+          0%,
+          90%,
+          100% {
+            opacity: 0;
+          }
+          5% {
+            opacity: 0.4;
+          }
+          10% {
+            opacity: 0;
+          }
+          15% {
+            opacity: 0.2;
+          }
+          20% {
+            opacity: 0;
+          }
         }
 
         @keyframes slide-in-left {
@@ -247,8 +310,15 @@ function VSContent() {
         }
 
         @keyframes ping-slow {
-          0% { transform: scale(1); opacity: 1; }
-          75%, 100% { transform: scale(1.1); opacity: 0.8; }
+          0% {
+            transform: scale(1);
+            opacity: 1;
+          }
+          75%,
+          100% {
+            transform: scale(1.1);
+            opacity: 0.8;
+          }
         }
       `}</style>
     </div>
