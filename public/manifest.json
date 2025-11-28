@@ -1,0 +1,27 @@
+{
+  "name": "電気イスゲーム - 2人対戦心理戦ゲーム",
+  "short_name": "電気イスゲーム",
+  "description": "1台の端末で2人対戦！12脚のイスに電流を仕掛け合う心理戦ゲーム。40点先取で勝利、3回感電したら負け！",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["games", "entertainment"],
+  "lang": "ja",
+  "dir": "ltr"
+}
