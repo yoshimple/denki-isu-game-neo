@@ -64,8 +64,8 @@ function VSContent() {
         <div className="flex items-center justify-between">
           {/* 先攻プレイヤー - 青 */}
           <div className="flex-1 flex flex-col items-center animate-slide-in-left">
-            <p className="text-sm text-gray-400 mb-1">先攻</p>
-            <h2 className="text-3xl md:text-5xl font-bold text-center max-w-[200px] truncate text-blue-400 drop-shadow-[0_0_10px_rgba(59,130,246,0.6)]">
+            <p className="text-xl md:text-2xl text-gray-400 mb-2">先攻</p>
+            <h2 className="text-5xl md:text-7xl font-bold text-center max-w-[280px] truncate text-blue-400 drop-shadow-[0_0_10px_rgba(59,130,246,0.6)]">
               {frontPlayerName}
             </h2>
           </div>
@@ -77,32 +77,16 @@ function VSContent() {
             }`}
           >
             <div className="relative">
-              {/* 雷エフェクト - VS周辺のみ */}
-              <div className="absolute inset-0 pointer-events-none overflow-visible">
-                <div className="lightning-effect" />
-                <div className="lightning-bolt lightning-bolt-1" />
-                <div className="lightning-bolt lightning-bolt-2" />
-                <div className="lightning-bolt lightning-bolt-3" />
-                <div className="lightning-bolt lightning-bolt-4" />
-                <div className="lightning-flash" />
-              </div>
               <span className="text-6xl md:text-8xl font-black text-yellow-400 animate-pulse drop-shadow-[0_0_30px_rgba(250,204,21,0.8)] relative z-10">
                 VS
               </span>
-              {/* 稲妻エフェクト - 黄色 */}
-              <div className="absolute -top-4 -left-4 text-4xl animate-bounce text-yellow-400 z-10">
-                ⚡
-              </div>
-              <div className="absolute -bottom-4 -right-4 text-4xl animate-bounce delay-100 text-yellow-400 z-10">
-                ⚡
-              </div>
             </div>
           </div>
 
           {/* 後攻プレイヤー - 赤 */}
           <div className="flex-1 flex flex-col items-center animate-slide-in-right">
-            <p className="text-sm text-gray-400 mb-1">後攻</p>
-            <h2 className="text-3xl md:text-5xl font-bold text-center max-w-[200px] truncate text-red-400 drop-shadow-[0_0_10px_rgba(239,68,68,0.6)]">
+            <p className="text-xl md:text-2xl text-gray-400 mb-2">後攻</p>
+            <h2 className="text-5xl md:text-7xl font-bold text-center max-w-[280px] truncate text-red-400 drop-shadow-[0_0_10px_rgba(239,68,68,0.6)]">
               {backPlayerName}
             </h2>
           </div>
@@ -140,141 +124,6 @@ function VSContent() {
 
       {/* CSSアニメーション */}
       <style jsx>{`
-        .lightning-effect {
-          position: absolute;
-          top: -50px;
-          left: -80px;
-          right: -80px;
-          bottom: -50px;
-          background: radial-gradient(
-            ellipse at center,
-            rgba(250, 204, 21, 0.4) 0%,
-            transparent 60%
-          );
-          animation: lightning-pulse 0.8s ease-in-out infinite;
-        }
-
-        .lightning-bolt {
-          position: absolute;
-          width: 6px;
-          background: linear-gradient(
-            to bottom,
-            transparent,
-            rgba(250, 204, 21, 1),
-            rgba(255, 255, 255, 0.9),
-            rgba(250, 204, 21, 1),
-            transparent
-          );
-          animation: lightning-strike 0.15s ease-out infinite;
-          filter: blur(1px);
-          box-shadow: 0 0 15px rgba(250, 204, 21, 0.8),
-            0 0 30px rgba(250, 204, 21, 0.5);
-        }
-
-        .lightning-bolt-1 {
-          left: -60px;
-          top: -40px;
-          height: 120px;
-          animation-delay: 0.2s;
-          transform: rotate(-15deg);
-        }
-
-        .lightning-bolt-2 {
-          right: -60px;
-          top: -40px;
-          height: 120px;
-          animation-delay: 0.5s;
-          transform: rotate(15deg);
-        }
-
-        .lightning-bolt-3 {
-          left: -30px;
-          bottom: -30px;
-          height: 100px;
-          animation-delay: 0.8s;
-          transform: rotate(20deg);
-        }
-
-        .lightning-bolt-4 {
-          right: -30px;
-          bottom: -30px;
-          height: 100px;
-          animation-delay: 0.3s;
-          transform: rotate(-20deg);
-        }
-
-        .lightning-flash {
-          position: absolute;
-          top: -30px;
-          left: -50px;
-          right: -50px;
-          bottom: -30px;
-          border-radius: 50%;
-          background: rgba(250, 204, 21, 0.4);
-          animation: flash 0.3s ease-out infinite;
-        }
-
-        @keyframes lightning-pulse {
-          0%,
-          100% {
-            opacity: 0.4;
-          }
-          25% {
-            opacity: 1;
-          }
-          50% {
-            opacity: 0.6;
-          }
-          75% {
-            opacity: 0.9;
-          }
-        }
-
-        @keyframes lightning-strike {
-          0% {
-            opacity: 0;
-            transform: scaleY(0) translateX(0);
-          }
-          5% {
-            opacity: 1;
-            transform: scaleY(1) translateX(-2px);
-          }
-          10% {
-            opacity: 1;
-            transform: scaleY(1) translateX(2px);
-          }
-          15% {
-            opacity: 0.8;
-            transform: scaleY(1) translateX(-1px);
-          }
-          20% {
-            opacity: 0;
-          }
-          100% {
-            opacity: 0;
-          }
-        }
-
-        @keyframes flash {
-          0%,
-          90%,
-          100% {
-            opacity: 0;
-          }
-          5% {
-            opacity: 0.4;
-          }
-          10% {
-            opacity: 0;
-          }
-          15% {
-            opacity: 0.2;
-          }
-          20% {
-            opacity: 0;
-          }
-        }
-
         @keyframes slide-in-left {
           from {
             opacity: 0;
