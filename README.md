@@ -102,4 +102,4 @@ npm run format
 
 ## 📝 ライセンス
 
-Private
+MIT
