@@ -100,7 +100,7 @@ export function GameOverOverlay({
                   const result = frontPlayer.roundHistory.find(
                     (r) =>
                       r.roundNumber === round &&
-                      r.turnSide === frontPlayerTurnSide
+                      r.turnSide === frontPlayerTurnSide,
                   );
                   return (
                     <td key={round} className="py-1 text-center">
@@ -110,11 +110,11 @@ export function GameOverOverlay({
                             result?.wasShocked
                               ? "bg-gray-700 text-yellow-400"
                               : result
-                              ? "bg-gray-700 text-white"
-                              : "bg-gray-800 text-gray-500"
+                                ? "bg-gray-700 text-white"
+                                : "bg-gray-800 text-gray-500"
                           }`}
                         >
-                          {result?.wasShocked ? "⚡" : result?.score ?? "-"}
+                          {result?.wasShocked ? "⚡" : (result?.score ?? "-")}
                         </div>
                       </div>
                     </td>
@@ -135,7 +135,7 @@ export function GameOverOverlay({
                   const result = backPlayer.roundHistory.find(
                     (r) =>
                       r.roundNumber === round &&
-                      r.turnSide === backPlayerTurnSide
+                      r.turnSide === backPlayerTurnSide,
                   );
                   return (
                     <td key={round} className="py-1 text-center">
@@ -145,11 +145,11 @@ export function GameOverOverlay({
                             result?.wasShocked
                               ? "bg-gray-700 text-yellow-400"
                               : result
-                              ? "bg-gray-700 text-white"
-                              : "bg-gray-800 text-gray-500"
+                                ? "bg-gray-700 text-white"
+                                : "bg-gray-800 text-gray-500"
                           }`}
                         >
-                          {result?.wasShocked ? "⚡" : result?.score ?? "-"}
+                          {result?.wasShocked ? "⚡" : (result?.score ?? "-")}
                         </div>
                       </div>
                     </td>

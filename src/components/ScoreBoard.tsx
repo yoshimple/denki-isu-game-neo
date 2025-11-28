@@ -54,7 +54,9 @@ export function ScoreBoard({
             {rounds.map((round) => (
               <th
                 key={round}
-                className={`font-normal text-center px-0.5 py-0.5 ${currentRound === round ? "text-yellow-400 font-bold" : ""}`}
+                className={`font-normal text-center px-0.5 py-0.5 ${
+                  currentRound === round ? "text-yellow-400 font-bold" : ""
+                }`}
               >
                 {round}
               </th>
