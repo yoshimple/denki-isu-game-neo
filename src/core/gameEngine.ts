@@ -180,7 +180,7 @@ function handlePressSwitch(state: GameState): GameState {
 
   const updatedSeater: PlayerState = {
     ...seater,
-    score: seater.score + (isShocked ? 0 : chairScore),
+    score: isShocked ? 0 : seater.score + chairScore,
     failureCount: seater.failureCount + (isShocked ? 1 : 0),
     roundHistory: [...seater.roundHistory, roundResult],
   };
