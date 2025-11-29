@@ -178,6 +178,7 @@ function handlePressSwitch(state: GameState): GameState {
     score: isShocked ? 0 : chairScore,
   };
 
+  // 感電した場合、合計点数を0点にリセットする
   const updatedSeater: PlayerState = {
     ...seater,
     score: isShocked ? 0 : seater.score + chairScore,
