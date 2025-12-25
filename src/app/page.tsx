@@ -24,7 +24,7 @@ const jsonLd = {
   author: {
     "@type": "Person",
     name: "yoshimple",
-    url: "https://note.com/yoshimple",
+    url: "https://x.com/yoshimple",
   },
   offers: {
     "@type": "Offer",
@@ -206,7 +206,7 @@ export default function StartPage() {
           {/* 作者リンク */}
           <div className="mt-4 text-center">
             <a
-              href="https://note.com/yoshimple"
+              href="https://x.com/yoshimple"
               target="_blank"
               rel="noopener noreferrer"
               className="text-yellow-600/70 hover:text-yellow-400 text-xs transition-colors"

@@ -1,0 +1,5 @@
+Project作成方法：
+cd /mnt/c/Users/yoshidahi/Desktop/work/src/denki-isu-game && npx create-next-app@latest . --typescript --tailwind --biome --app --src-dir --turbopack --import-alias "@/*" --use-npm --yes
+
+
+あとはGithub、Vercelにデプロイするだけ
